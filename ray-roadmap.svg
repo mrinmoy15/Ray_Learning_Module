@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 900" width="860" height="900" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="860" height="900" fill="#1a1a1a" rx="12"/>
+
+  <!-- ── Phase labels (vertical) ── -->
+  <text x="18" y="165" fill="#888" font-size="11" text-anchor="middle" transform="rotate(-90,18,165)">Phase 1</text>
+  <text x="18" y="340" fill="#888" font-size="11" text-anchor="middle" transform="rotate(-90,18,340)">Phase 2</text>
+  <text x="18" y="570" fill="#888" font-size="11" text-anchor="middle" transform="rotate(-90,18,570)">Phase 3</text>
+  <text x="18" y="790" fill="#888" font-size="11" text-anchor="middle" transform="rotate(-90,18,790)">Phase 4</text>
+
+  <!-- ══════════════════════════════════════
+       PHASE 1 — Foundation: Ray Core
+  ══════════════════════════════════════ -->
+  <rect x="36" y="30" width="806" height="160" rx="10" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="54" y="56" fill="#e0e0e0" font-size="15" font-weight="600">Foundation — Ray Core</text>
+
+  <!-- Install Ray (gray) -->
+  <rect x="60" y="72" width="148" height="80" rx="10" fill="#4a4a4a" stroke="#666" stroke-width="1"/>
+  <text x="134" y="107" fill="#d0d0d0" font-size="14" font-weight="600" text-anchor="middle">Install Ray</text>
+  <text x="134" y="128" fill="#aaa" font-size="11" text-anchor="middle">pip install ray</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="112" x2="238" y2="112" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Tasks (purple) -->
+  <rect x="240" y="72" width="148" height="80" rx="10" fill="#4a3f8a" stroke="#7b6fcf" stroke-width="1"/>
+  <text x="314" y="107" fill="#d8d4f8" font-size="14" font-weight="600" text-anchor="middle">Tasks</text>
+  <text x="314" y="128" fill="#a89ee0" font-size="11" text-anchor="middle">@ray.remote functions</text>
+
+  <!-- Arrow -->
+  <line x1="390" y1="112" x2="418" y2="112" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Actors (purple) -->
+  <rect x="420" y="72" width="148" height="80" rx="10" fill="#4a3f8a" stroke="#7b6fcf" stroke-width="1"/>
+  <text x="494" y="107" fill="#d8d4f8" font-size="14" font-weight="600" text-anchor="middle">Actors</text>
+  <text x="494" y="128" fill="#a89ee0" font-size="11" text-anchor="middle">Stateful workers</text>
+
+  <!-- Arrow -->
+  <line x1="570" y1="112" x2="598" y2="112" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Object store (purple) -->
+  <rect x="600" y="72" width="148" height="80" rx="10" fill="#4a3f8a" stroke="#7b6fcf" stroke-width="1"/>
+  <text x="674" y="107" fill="#d8d4f8" font-size="14" font-weight="600" text-anchor="middle">Object store</text>
+  <text x="674" y="128" fill="#a89ee0" font-size="11" text-anchor="middle">ray.get / ray.put</text>
+
+  <!-- Down arrow P1 → P2 -->
+  <line x1="439" y1="192" x2="439" y2="222" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══════════════════════════════════════
+       PHASE 2 — Core Patterns & Scheduling
+  ══════════════════════════════════════ -->
+  <rect x="36" y="226" width="806" height="150" rx="10" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="54" y="252" fill="#e0e0e0" font-size="15" font-weight="600">Core patterns &amp; scheduling</text>
+
+  <!-- Patterns -->
+  <rect x="60" y="266" width="180" height="80" rx="10" fill="#2a5a4a" stroke="#3d8a6e" stroke-width="1"/>
+  <text x="150" y="301" fill="#9de8c8" font-size="14" font-weight="600" text-anchor="middle">Patterns</text>
+  <text x="150" y="322" fill="#7abfa3" font-size="11" text-anchor="middle">ray.wait, pipelines</text>
+
+  <!-- Scheduling -->
+  <rect x="258" y="266" width="180" height="80" rx="10" fill="#2a5a4a" stroke="#3d8a6e" stroke-width="1"/>
+  <text x="348" y="301" fill="#9de8c8" font-size="14" font-weight="600" text-anchor="middle">Scheduling</text>
+  <text x="348" y="322" fill="#7abfa3" font-size="11" text-anchor="middle">Resources, placement</text>
+
+  <!-- Fault tolerance -->
+  <rect x="456" y="266" width="180" height="80" rx="10" fill="#2a5a4a" stroke="#3d8a6e" stroke-width="1"/>
+  <text x="546" y="301" fill="#9de8c8" font-size="14" font-weight="600" text-anchor="middle">Fault tolerance</text>
+  <text x="546" y="322" fill="#7abfa3" font-size="11" text-anchor="middle">Retry, recovery</text>
+
+  <!-- Anti-patterns -->
+  <rect x="654" y="266" width="168" height="80" rx="10" fill="#2a5a4a" stroke="#3d8a6e" stroke-width="1"/>
+  <text x="738" y="301" fill="#9de8c8" font-size="14" font-weight="600" text-anchor="middle">Anti-patterns</text>
+  <text x="738" y="322" fill="#7abfa3" font-size="11" text-anchor="middle">Avoid pitfalls</text>
+
+  <!-- Down arrow P2 → P3 -->
+  <line x1="439" y1="378" x2="439" y2="408" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══════════════════════════════════════
+       PHASE 3 — Ray Libraries
+  ══════════════════════════════════════ -->
+  <rect x="36" y="412" width="806" height="310" rx="10" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="54" y="438" fill="#e0e0e0" font-size="15" font-weight="600">Ray libraries (pick by use case)</text>
+
+  <!-- Row 1: Blue boxes -->
+  <!-- Ray Data -->
+  <rect x="60" y="450" width="240" height="80" rx="10" fill="#2a4a7a" stroke="#3d6ab0" stroke-width="1"/>
+  <text x="180" y="485" fill="#90bff0" font-size="14" font-weight="600" text-anchor="middle">Ray Data</text>
+  <text x="180" y="506" fill="#6a9ed0" font-size="11" text-anchor="middle">ETL, batch inference</text>
+
+  <!-- Ray Train -->
+  <rect x="318" y="450" width="240" height="80" rx="10" fill="#2a4a7a" stroke="#3d6ab0" stroke-width="1"/>
+  <text x="438" y="485" fill="#90bff0" font-size="14" font-weight="600" text-anchor="middle">Ray Train</text>
+  <text x="438" y="506" fill="#6a9ed0" font-size="11" text-anchor="middle">Distributed training</text>
+
+  <!-- Ray Tune -->
+  <rect x="576" y="450" width="240" height="80" rx="10" fill="#2a4a7a" stroke="#3d6ab0" stroke-width="1"/>
+  <text x="696" y="485" fill="#90bff0" font-size="14" font-weight="600" text-anchor="middle">Ray Tune</text>
+  <text x="696" y="506" fill="#6a9ed0" font-size="11" text-anchor="middle">Hyperparameter search</text>
+
+  <!-- Row 2: Coral + Amber boxes -->
+  <!-- Ray Serve -->
+  <rect x="60" y="554" width="240" height="80" rx="10" fill="#6a2a1a" stroke="#a04030" stroke-width="1"/>
+  <text x="180" y="589" fill="#f0a090" font-size="14" font-weight="600" text-anchor="middle">Ray Serve</text>
+  <text x="180" y="610" fill="#c07060" font-size="11" text-anchor="middle">Model serving, LLMs</text>
+
+  <!-- RLlib -->
+  <rect x="318" y="554" width="240" height="80" rx="10" fill="#6a2a1a" stroke="#a04030" stroke-width="1"/>
+  <text x="438" y="589" fill="#f0a090" font-size="14" font-weight="600" text-anchor="middle">RLlib</text>
+  <text x="438" y="610" fill="#c07060" font-size="11" text-anchor="middle">Reinforcement learning</text>
+
+  <!-- Observability -->
+  <rect x="576" y="554" width="240" height="80" rx="10" fill="#5a4010" stroke="#8a6820" stroke-width="1"/>
+  <text x="696" y="589" fill="#f0c860" font-size="14" font-weight="600" text-anchor="middle">Observability</text>
+  <text x="696" y="610" fill="#c09840" font-size="11" text-anchor="middle">Dashboard, metrics</text>
+
+  <!-- Down arrow P3 → P4 -->
+  <line x1="439" y1="724" x2="439" y2="754" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══════════════════════════════════════
+       PHASE 4 — Production & Deployment
+  ══════════════════════════════════════ -->
+  <rect x="36" y="758" width="806" height="120" rx="10" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="54" y="784" fill="#e0e0e0" font-size="15" font-weight="600">Production &amp; deployment</text>
+
+  <!-- Ray Clusters -->
+  <rect x="60" y="796" width="240" height="64" rx="10" fill="#2a5a1a" stroke="#3d8a28" stroke-width="1"/>
+  <text x="180" y="823" fill="#90e070" font-size="14" font-weight="600" text-anchor="middle">Ray Clusters</text>
+  <text x="180" y="844" fill="#60b040" font-size="11" text-anchor="middle">Head + worker nodes</text>
+
+  <!-- KubeRay -->
+  <rect x="318" y="796" width="240" height="64" rx="10" fill="#2a5a1a" stroke="#3d8a28" stroke-width="1"/>
+  <text x="438" y="823" fill="#90e070" font-size="14" font-weight="600" text-anchor="middle">KubeRay</text>
+  <text x="438" y="844" fill="#60b040" font-size="11" text-anchor="middle">Kubernetes deployment</text>
+
+  <!-- Autoscaling -->
+  <rect x="576" y="796" width="240" height="64" rx="10" fill="#2a5a1a" stroke="#3d8a28" stroke-width="1"/>
+  <text x="696" y="823" fill="#90e070" font-size="14" font-weight="600" text-anchor="middle">Autoscaling</text>
+  <text x="696" y="844" fill="#60b040" font-size="11" text-anchor="middle">Cloud &amp; on-prem</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+</svg>
